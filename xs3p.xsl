@@ -807,6 +807,40 @@ pre {
     max-width: 400px;
 }
 
+
+// table formatting, used in documentation elements (after Markdown resolution)
+    .documentation table {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .documentation thead tr {
+      background-color: #555555;
+      color: #f5f5f5;
+      text-align: left;
+    }
+
+    .documentation th,
+    .documentation td {
+      padding: 12px 15px;
+    }
+
+    .documentation tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .documentation tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    .documentation tbody tr:last-of-type {
+      border-bottom: 2px solid #333;
+    }
+	      
 // Syntax highlighting
 .codehilite .err {color: #FFF; background-color: #D2322D; font-weight: bold;} /* Error */
 .codehilite .c   {color: #999;}
