@@ -302,7 +302,7 @@
                </xsl:choose>
             </style>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.2/markdown-it.min.js" type="text/javascript" charset="UTF-8"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.js" type="text/javascript" charset="UTF-8" integrity="sha512-2LtYcLGnCbAWz9nDIrfG2pHFiFu9n+3oGecQlzLuYsLgen/oxiYscGWnDST9J9EZanlsQkDD0ZP2n/6peDuALQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
          </head>
          <body data-spy="scroll" data-target=".xs3p-sidebar" data-offset="65">
 
@@ -428,6 +428,8 @@
                   } else {
                      normalized = $(rawDocID).html();
                   }
+                  normalized = normalized.replace(new RegExp("&amp;gt;", "gm"), "&gt;");
+                  normalized = normalized.replace(new RegExp("&amp;lt;", "gm"), "&lt;");
                   $(this).html(c.render(normalized));
                   $(this).find('code,pre').each(function(i, block) {
                      $(this).html($(this).text());
@@ -808,10 +810,9 @@ pre {
 }
 
 
-// table formatting, used in documentation elements (after Markdown resolution)
     .documentation table {
       border-collapse: collapse;
-      margin: 25px 0;
+      margin: 25px 0 10px;
       font-size: 0.9em;
       font-family: sans-serif;
       min-width: 400px;
