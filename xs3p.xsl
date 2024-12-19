@@ -808,7 +808,14 @@ pre {
 .popover {
     max-width: 400px;
 }
-
+    .documentation blockquote {
+      padding: 10px 20px;
+      margin: 0 0 20px;
+      font-size: inherit;
+      border-left: 5px solid #bebebe;
+      border-radius: 4px;
+      background-color: #f7f7f7;
+    }
 
     .documentation table {
       border-collapse: collapse;
